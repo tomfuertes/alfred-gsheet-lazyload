@@ -12,7 +12,7 @@
     "alfredo": "^0.2.0",
     "google-sheets": "0.0.7",
     "google-spreadsheet": "^1.0.1",
-    "openurl": "^1.1.0",
-    "underscore": "^1.8.3"
+    "lodash": "^4.6.1",
+    "openurl": "^1.1.0"
   }
 }
