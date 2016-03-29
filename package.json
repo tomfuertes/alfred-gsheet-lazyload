@@ -1,0 +1,18 @@
+{
+  "name": "sheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Engebretson <adam@enge.me>",
+  "license": "ISC",
+  "dependencies": {
+    "alfredo": "^0.2.0",
+    "google-sheets": "0.0.7",
+    "google-spreadsheet": "^1.0.1",
+    "openurl": "^1.1.0",
+    "underscore": "^1.8.3"
+  }
+}

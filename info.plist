@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>me.enge.lookup</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>85E47270-DA4E-4824-8EDF-FEB54B61FD51</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B62DE229-94A1-4ECA-A998-DF34F85B298F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>adamgoose</string>
+	<key>description</key>
+	<string>Looks up Bookmarks against a Google Spreadsheet</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Sheetmarks</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/node open.js "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B62DE229-94A1-4ECA-A998-DF34F85B298F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>lu</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/local/bin/node index.js "1JHtId-vYNVT9q6U8QErd4ksXxhTkc3ua2snWfUiOmmQ" "{query}"</string>
+				<key>subtext</key>
+				<string>lu keyword</string>
+				<key>title</key>
+				<string>Lookup</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>85E47270-DA4E-4824-8EDF-FEB54B61FD51</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Bookmark Lookup
+
+Use this tool to lookup company bookmarks. It currently uses the public and web-published spreadsheet (here)[https://docs.google.com/spreadsheets/d/1JHtId-vYNVT9q6U8QErd4ksXxhTkc3ua2snWfUiOmmQ/pubhtml].
+
+### CLI Usage
+
+1. Install Node.js
+2. `cd /path/to/this/folder/index.js {keyword}`
+
+You will see an XML object representing the the matches. This will match the beginning of the keyword. For example, if your spreadsheet has a keyword `newsletter`, then you can type in `news`, or even just `n` and it will match!
+
+### Alfredification
+
+Install the plugin by opening `Sheetmarks.alfredworkflow`. Then, open the workflow in Alfred Preferences. Double-click on the "Script Filter" entitled "lu". Replace `{YOUR_SHEET_ID}` with, well, your sheet ID!
+
+Then, simply type in `lu {keyword}`. Select the one you want, and Bob's your uncle!</string>
+	<key>uidata</key>
+	<dict>
+		<key>85E47270-DA4E-4824-8EDF-FEB54B61FD51</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>B62DE229-94A1-4ECA-A998-DF34F85B298F</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/adamgoose/</string>
+</dict>
+</plist>
